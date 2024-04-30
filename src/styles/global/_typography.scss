@@ -1,0 +1,140 @@
+// @font-face {
+// 	font-display: swap;
+// 	font-family: 
+// 	font-style: normal;
+    
+// 	src: url('/fonts/') format('woff2');
+// }
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+blockquote,
+cite,
+p,
+span,
+button {
+/* Calc Formula:
+calc(min_font_size_in_REM + (max_font_size - min_font_size) * ((100vw - min_viewport_including_unit) / (max_viewport - min_viewport)))
+*/
+	font-size: clamp(calc(var(--min-font) / 16 * 1rem), calc((var(--min-font) / 16 * 1rem) + ((var(--max-font) / 16) - (var(--min-font) / 16)) * ((100vw - (var(--min-viewport) * 1rem)) / (var(--max-viewport) - var(--min-viewport)))), calc(var(--max-font) / 16 * 1rem));
+}
+
+/* NOTE: keeping specificity 0 */
+:where(h1, h2, h3, h4, h5, h6) {
+	margin-block: 0 0.5em; // TBD
+}
+:where(h1, h2, h3, h4, h5, h6, .text-jumbo, .text-1, .text-2, .text-3, .text-4, .text-5, .text-6) {
+	color: var(--text-dark); // TBD
+}
+
+
+h1,
+.text-1 {
+    // ALL TBD
+
+	--min-font: 56;
+	--max-font: 112;
+}
+
+h2,
+.text-2 {
+    // ALL TBD
+
+	--min-font: 40;
+	--max-font: 80;
+}
+
+h3,
+.text-3 {
+    // ALL TBD
+
+	--min-font: 28;
+	--max-font: 56;
+}
+
+h4,
+.text-4 {
+    // ALL TBD
+
+	--min-font: 24;
+	--max-font: 40;
+}
+
+h5,
+.text-5 {
+    // ALL TBD
+
+	--min-font: 18;
+	--max-font: 32;
+}
+
+h6,
+.text-6 {
+    // ALL TBD
+
+	--min-font: 14;
+	--max-font: 16;
+}
+
+ul {
+	list-style: none;
+	margin-block: 0 1.5em;
+	padding-inline: 0;
+}
+
+ul:not([class]) {
+	line-height: 1.5;
+	margin-block: 0 1.5em;
+	padding-inline-start: 15px;
+
+	li {
+		padding-block: 0;
+		padding-inline: 0;
+		position: relative;
+	}
+
+	li::before {
+		content: '•';
+		display: block;
+		font-family: sans-serif;
+		inset-block-start: 0;
+		inset-inline-start: -20px;
+		margin-inline-end: 10px;
+		position: absolute;
+	}
+}
+
+ol:not([class]) {
+	line-height: 1.5;
+	margin-block: 0 1.5em;
+	margin-inline: 22px 0;
+	padding-inline: 0;
+
+	li {
+		padding-inline-start: 10px;
+	}
+}
+
+li {
+	--min-font: 16;
+	--max-font: 18;
+}
+
+p {
+	--min-font: 16;
+	--max-font: 18;
+
+	line-height: 1.5;
+	margin-block: 0 1.5em;
+}
+
+strong,
+b {
+	// TBD
+}

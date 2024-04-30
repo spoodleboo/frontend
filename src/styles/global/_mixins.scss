@@ -1,0 +1,51 @@
+@use 'sass:math';
+
+/* Media Queries */
+$mq-xs-max-value: #{math.div(567, 16) + 'rem'};
+$mq-xs-max: '(max-width: #{$mq-xs-max-value})';
+$mq-xs-min-value: #{math.div(568, 16) + 'rem'};
+$mq-xs-min: '(min-width: #{$mq-xs-min-value})';
+$mq-s-max-value: #{math.div(767, 16) + 'rem'};
+$mq-s-max: '(max-width: #{$mq-s-max-value})';
+$mq-m-min-value: #{math.div(768, 16) + 'rem'};
+$mq-m-min: '(min-width: #{$mq-m-min-value})';
+$mq-m-max-value: #{math.div(1024, 16) + 'rem'};
+$mq-m-max: '(max-width: #{$mq-m-max-value})';
+$mq-m-only: '(min-width: #{$mq-m-min-value}) and (max-width: #{$mq-m-max-value})';
+$mq-l-min-value: #{math.div(1025, 16) + 'rem'};
+$mq-l-min: '(min-width: #{$mq-l-min-value})';
+$mq-max-value: #{math.div(1600, 16) + 'rem'};
+$mq-max: '(min-width: #{$mq-max-value})';
+
+/* Usage = @media all and #{$mq-m-min} { } */
+@mixin mq($value) {
+	@if $value == max {
+		@media all and #{$mq-max} {
+			@content;
+		}
+	} @else if $value == l {
+		@media all and #{$mq-l-min} {
+			@content;
+		}
+	} @else if $value == m {
+		@media all and #{$mq-m-min} {
+			@content;
+		}
+	} @else {
+		@media all and (min-width: #{math.div($value, 16) + 'rem'}) {
+			@content;
+		}
+	}
+}
+
+@mixin grid($cols: 12, $gapSmall: 20, $gapLarge: 30) {
+	--grid-gap: #{$gapSmall}px;
+
+	column-gap: var(--grid-gap);
+	display: grid;
+	grid-template-columns: repeat($cols, 1fr);
+
+	@media all and (min-width: 64rem) {
+		--grid-gap: #{$gapLarge}px;
+	}
+}

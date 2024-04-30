@@ -1,0 +1,121 @@
+:root {
+	/* Primary Color Palette */
+	--dark: #000;
+	--light: #fff;
+
+
+	--orange-200: #FCC550;
+	--orange-300: #F98113;
+	--orange-400: #E5621A;
+	--orange-500: #B54000;
+
+	--earth-50: #F6F5F3;
+	--earth-200: #E9E8D8;
+	--earth-300: #DDD3AF;
+	--earth-400: #C88F42;
+	--earth-500: #542E19;
+
+	--olive-300: #BAC96C;
+	--olive-400: #AE9A00;
+	--olive-500: #55601C;
+
+	--green-300: #B8CF95;
+	--green-400: #6CC028;
+	--green-500: #275937;
+
+	--teal-25: #E9F6F6;
+	--teal-50: #D6F1EF;
+	--teal-300: #A0D6D2;
+	--teal-400: #029D8D;
+	--teal-500: #00675A;
+
+	--blue-300: #6FD4E4;
+	--blue-400: #5BC6E8;
+	--blue-500: #00D6D4;
+	--blue-600: #006983;
+
+	--gray-200: #CCC;
+	--gray-400: #989B97;
+	--gray-500: #686868;
+	--gray-600: #444;
+	--gray-700: #312626;
+	--gray-800: #222;
+
+
+	/* Fonts */
+	--base-font: 'Segoe UI', 'Helvetica Neue', sans-serif;
+
+	/* Fluid Typography */
+	--min-viewport: 20; // 320px
+	--max-viewport: 87.5; // 1400px
+
+	/* Radius */
+	--border-radius: 8px; // TBD
+
+	/* Easing */
+	--easing: ease;
+
+	/* Timing */
+	--timing: 250ms;
+
+	/* Heights */
+
+	/* Widths */
+	--content-width: 1400px;
+}
+
+@media all and #{$mq-s-max} {
+	:root {
+		/* Heights */
+		--global-header-height: 60px; // TBD
+
+		/* Spacing Block */
+		--spacing-block-xxl: 64px;
+		--spacing-block-xl: 56px;
+		--spacing-block-l: 48px;
+		--spacing-block-m: 32px;
+		--spacing-block-s: 24px;
+		--spacing-block-xs: 16px;
+
+		/* Spacing Inline */
+		
+	}
+}
+
+@media all and #{$mq-m-min} {
+	:root {
+		/* Heights */
+		--global-header-height: 80px;  // TBD
+
+		/* Spacing Block */
+		--spacing-block-xxl: 112px;
+		--spacing-block-xl: 56px;
+		--spacing-block-l: 48px;
+		--spacing-block-m: 32px;
+		--spacing-block-s: 24px;
+		--spacing-block-xs: 16px;
+	}
+}
+
+@media all and #{$mq-m-max} {
+	:root {
+		/* Gap */
+		--grid-gap: 16px; // TBD
+	}
+}
+
+@media all and #{$mq-m-only} {
+	:root {
+		/* Spacing Inline */
+	}
+}
+
+@media all and #{$mq-l-min} {
+	:root {
+		/* Gap */
+		--grid-gap: 32px; // TBD
+
+		/* Spacing Inline */
+		
+	}
+}

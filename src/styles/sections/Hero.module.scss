@@ -1,0 +1,11 @@
+.hero {
+    /* Start Temp Styles */
+    background-color: var(--green-300);
+    margin-block-end: var(--spacing-block-l);
+    padding: 2rem 6rem;
+
+    &::before {
+        content: 'Hero';
+    }
+    /* End Temp Styles */
+}

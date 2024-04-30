@@ -1,0 +1,29 @@
+/* Focus States */
+:focus:not(:focus-visible) {
+	outline: none;
+}
+
+:focus-visible {
+	outline: 5px auto Highlight;
+
+	/* Firefox */
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+/* Link */
+a {
+	color: inherit;
+}
+
+/* Button */
+button {
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 1.25rem;
+	line-height: inherit;
+	padding: 0;
+}
+

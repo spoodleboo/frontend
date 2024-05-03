@@ -2,4 +2,4 @@
 my_path=$(pwd)
 my_name=${my_path##*/}
 
-podman build -t ${my_name} .
+docker build -t ${my_name} .

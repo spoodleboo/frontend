@@ -25,7 +25,7 @@ export default function Page() {
     <>
       <main> 
 
-        <h1>WWF</h1>
+        <h1>foobie</h1>
 
         <h2 className="text-4">Sections</h2>
         <Accordion/>{/* Pass in classes: className={styles.propClass} */}
